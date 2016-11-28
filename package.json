@@ -1,0 +1,27 @@
+{
+  "name": "higher-docker-manager",
+  "version": "1.0.0",
+  "description": "Docker management package with higher-level functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ierceg/higher-docker-manager.git"
+  },
+  "keywords": [
+    "docker",
+    "management"
+  ],
+  "author": "Ivan Erceg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ierceg/higher-docker-manager/issues"
+  },
+  "homepage": "https://github.com/ierceg/higher-docker-manager#readme",
+  "dependencies": {
+    "lodash": "^4.17.2",
+    "node-docker-api": "^1.1.2"
+  }
+}

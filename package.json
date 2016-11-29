@@ -1,6 +1,6 @@
 {
   "name": "@lazyass/higher-docker-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Docker management package with higher-level functions",
   "main": "index.js",
   "scripts": {

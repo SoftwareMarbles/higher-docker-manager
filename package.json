@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ierceg/higher-docker-manager.git"
+    "url": "git+https://github.com/SoftwareMarbles/higher-docker-manager.git"
   },
   "keywords": [
     "docker",
@@ -17,9 +17,9 @@
   "author": "Ivan Erceg",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ierceg/higher-docker-manager/issues"
+    "url": "https://github.com/SoftwareMarbles/higher-docker-manager/issues"
   },
-  "homepage": "https://github.com/ierceg/higher-docker-manager#readme",
+  "homepage": "https://github.com/SoftwareMarbles/higher-docker-manager#readme",
   "dependencies": {
     "lodash": "^4.17.2",
     "node-docker-api": "^1.1.2"

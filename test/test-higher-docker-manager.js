@@ -179,4 +179,25 @@ describe('HigherDockerManager', function() {
                 });
         });
     });
+
+    describe('getNetworkForNameOrId', function() {
+        it('returns null on unknown ID or name', function() {
+            return HigherDockerManager.getNetworkForNameOrId('xyz-inexistent')
+                .then((container) => {
+                    assert(_.isNull(container));
+                });
+        });
+
+        it('returns object for good name', function() {
+            return HigherDockerManager.getOwnContainer()
+                .then((container) => {
+                    assert(container);
+                    return HigherDockerManager.getNetworkForNameOrId(_.first(_.keys(
+                        container.NetworkSettings.Networks)));
+                })
+                .then((network) => {
+                    assert(!_.isNull(network));
+                });
+        });
+    });
 });

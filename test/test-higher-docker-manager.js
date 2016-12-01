@@ -8,6 +8,36 @@ const assert = require('assert');
 const HigherDockerManager = require('../lib/higher-docker-manager');
 
 describe('HigherDockerManager', function() {
+    describe('pullImage', function() {
+        it('issues an error on unknown image', function() {
+            this.timeout(10000);
+            return HigherDockerManager.pullImage('xyz-inexistent', '1.2.3')
+                .then(() => {
+                    assert(false);
+                    process.exit(-1);
+                })
+                .catch((err) => {
+                    assert(err);
+                    assert.equal(err.message, '(HTTP code 404) unexpected - {"message":' +
+                        '"repository xyz-inexistent not found: does not exist or no read access"}' +
+                        '\n ');
+                });
+        });
+
+        it('returns image object on success', function() {
+            this.timeout(100000);
+            return HigherDockerManager.pullImage('hello-world', 'latest')
+                .then((image) => {
+                    assert(image);
+                    assert.equal(image.id, 'hello-world:latest');
+                })
+                .catch((err) => {
+                    assert(false, err);
+                    process.exit(-1);
+                });
+        });
+    });
+
     describe('_processContainerOutputBuffers', function() {
         it('works correctly for buffers (1)', function() {
             const buffer = Buffer.from(JSON.parse(fs.readFileSync(
@@ -64,7 +94,7 @@ describe('HigherDockerManager', function() {
                 });
         });
 
-        it('returns container for good image:tag', function() {
+        it('returns container for good label:name', function() {
             return HigherDockerManager.getOwnContainer()
                 .then((container) => {
                     assert(container);
@@ -76,32 +106,48 @@ describe('HigherDockerManager', function() {
         });
     });
 
-    describe('getContainersForLabel', function() {
+    describe('getVolumesForLabel', function() {
         it('returns empty on bad args', function() {
-            return HigherDockerManager.getContainersForLabel()
+            return HigherDockerManager.getVolumesForLabel()
                 .then((containers) => {
                     assert(_.isEmpty(containers));
                 });
         });
 
         it('returns empty on unknown label', function() {
-            return HigherDockerManager.getContainersForLabel('xyz-inexistent', '')
+            return HigherDockerManager.getVolumesForLabel('xyz-inexistent', '')
                 .then((containers) => {
                     assert(_.isEmpty(containers));
                 });
         });
 
         it('returns empty on test label but inexistent value', function() {
-            return HigherDockerManager.getContainersForLabel('test-label', 'xyz-inexistent')
+            return HigherDockerManager.getVolumesForLabel('test-label', 'xyz-inexistent')
+                .then((containers) => {
+                    assert(_.isEmpty(containers));
+                });
+        });
+    });
+
+    describe('getNetworksForLabel', function() {
+        it('returns empty on bad args', function() {
+            return HigherDockerManager.getNetworksForLabel()
                 .then((containers) => {
                     assert(_.isEmpty(containers));
                 });
         });
 
-        it('returns container for good image:tag', function() {
-            return HigherDockerManager.getContainersForLabel('test-label', 'test-value')
+        it('returns empty on unknown label', function() {
+            return HigherDockerManager.getNetworksForLabel('xyz-inexistent', '')
                 .then((containers) => {
-                    assert(!_.isEmpty(containers));
+                    assert(_.isEmpty(containers));
+                });
+        });
+
+        it('returns empty on test label but inexistent value', function() {
+            return HigherDockerManager.getNetworksForLabel('test-label', 'xyz-inexistent')
+                .then((containers) => {
+                    assert(_.isEmpty(containers));
                 });
         });
     });

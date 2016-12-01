@@ -10,7 +10,7 @@ const HigherDockerManager = require('../lib/higher-docker-manager');
 describe('HigherDockerManager', function() {
     describe('pullImage', function() {
         it('issues an error on unknown image', function() {
-            this.timeout(10000);
+            this.timeout(20000);
             return HigherDockerManager.pullImage('xyz-inexistent', '1.2.3')
                 .then(() => {
                     assert(false);
@@ -50,6 +50,17 @@ describe('HigherDockerManager', function() {
                 .map((payload) => payload.payload.toString())
                 .value()
                 .join('');
+            assert.equal(output.length, 595);
+            assert.equal(output.split('\n').length, 11);
+        });
+    });
+
+    describe('containerOutputBuffersToString', function() {
+        it('works correctly for buffers (1)', function() {
+            const buffer = Buffer.from(JSON.parse(fs.readFileSync(
+                __dirname + '/fixtures/docker-manager-buffers-1.json')));
+            assert.equal(buffer.length, 611, buffer);
+            const output = HigherDockerManager.containerOutputBuffersToString([buffer]);
             assert.equal(output.length, 595);
             assert.equal(output.split('\n').length, 11);
         });

@@ -36,6 +36,19 @@ describe('HigherDockerManager', function() {
                     process.exit(-1);
                 });
         });
+
+        it('returns image object on success with name and tag in name', function() {
+            this.timeout(100000);
+            return HigherDockerManager.pullImage('hello-world:latest')
+                .then((image) => {
+                    assert(image);
+                    assert.equal(image.id, 'hello-world:latest');
+                })
+                .catch((err) => {
+                    assert(false, err);
+                    process.exit(-1);
+                });
+        });
     });
 
     describe('_processContainerOutputBuffers', function() {

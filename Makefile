@@ -17,7 +17,7 @@ test-cont:
 		--workdir /package \
 		-l 'test-label=test-value' \
 		ierceg/node-dev:6.9.1 \
-		nodemon -V -L -w /package --exec mocha
+		nodemon -V -d 1 -L -w /package --exec mocha
 
 coverage:
 	docker run --rm -t \

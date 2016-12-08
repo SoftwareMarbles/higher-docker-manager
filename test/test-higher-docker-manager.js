@@ -11,7 +11,7 @@ describe('HigherDockerManager', function() {
     describe('pullImage', function() {
         it('issues an error on unknown image', function() {
             this.timeout(20000);
-            return HigherDockerManager.pullImage('xyz-inexistent', '1.2.3')
+            return HigherDockerManager.pullImage({}, 'xyz-inexistent', '1.2.3')
                 .then(() => {
                     assert(false);
                     process.exit(-1);
@@ -26,7 +26,7 @@ describe('HigherDockerManager', function() {
 
         it('returns image object on success', function() {
             this.timeout(100000);
-            return HigherDockerManager.pullImage('hello-world', 'latest')
+            return HigherDockerManager.pullImage({}, 'hello-world', 'latest')
                 .then((image) => {
                     assert(image);
                     assert.equal(image.id, 'hello-world:latest');
@@ -39,7 +39,7 @@ describe('HigherDockerManager', function() {
 
         it('returns image object on success with name and tag in name', function() {
             this.timeout(100000);
-            return HigherDockerManager.pullImage('hello-world:latest')
+            return HigherDockerManager.pullImage({}, 'hello-world:latest')
                 .then((image) => {
                     assert(image);
                     assert.equal(image.id, 'hello-world:latest');

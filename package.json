@@ -25,5 +25,8 @@
     "lodash": "^4.17.2",
     "node-docker-api": "^1.1.2",
     "selectn": "^1.1.1"
+  },
+  "devDependencies": {
+    "stream-buffers": "^3.0.1"
   }
 }

@@ -7,6 +7,7 @@
 const _ = require('lodash');
 const fs = require('fs');
 const assert = require('assert');
+const streamBuffers = require('stream-buffers');
 
 const HigherDockerManager = require('../lib/higher-docker-manager');
 
@@ -76,6 +77,45 @@ describe('HigherDockerManager', function () {
                 .catch((err) => {
                     assert(false, err);
                     process.exit(-1);
+                });
+        });
+    });
+
+    describe('runTemporaryContainer', function () {
+        this.timeout(100000);
+        it('works', function () {
+            return HigherDockerManager.pullImage({}, 'hello-world:latest')
+                .then(() => HigherDockerManager.runTemporaryContainer({
+                    image: 'hello-world:latest'
+                }))
+                .then((output) => {
+                    assert(_.isArray(output));
+                    assert(output[1].payload, 'Hello from Docker!\n');
+                });
+        });
+    });
+
+    describe('_processContainerOutputStream', function () {
+        it('works correctly for buffers (1)', function () {
+            const buffer = Buffer.from(JSON.parse(fs.readFileSync(
+                `${__dirname}/fixtures/docker-manager-buffers-1.json`)));
+            assert.equal(buffer.length, 611, buffer);
+            const stream = new streamBuffers.ReadableStreamBuffer({
+                frequency: 1,
+                //  Container outputs its buffers in a certain way and we expect that
+                //  so we cannot cut them further during testing.
+                chunkSize: buffer.length
+            });
+            stream.put(buffer);
+            stream.stop();
+            return HigherDockerManager._processContainerOutputStream(stream)
+                .then((payloads) => {
+                    assert.equal(payloads.length, 2);
+                    const output = _(payloads)
+                        .map(payload => payload.payload.toString())
+                        .join('');
+                    assert.equal(output.length, 595);
+                    assert.equal(output.split('\n').length, 11);
                 });
         });
     });

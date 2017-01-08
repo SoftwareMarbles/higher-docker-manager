@@ -1,10 +1,11 @@
 {
-  "name": "@lazyass/higher-docker-manager",
+  "name": "higher-docker-manager",
   "version": "1.5.0",
   "description": "Docker management package with higher-level functions",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "gen-readme": "jsdoc2md lib/**/*.js -c jsdoc.conf --template README.hbs > README.md"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,10 @@
     "selectn": "^1.1.1"
   },
   "devDependencies": {
+    "jsdoc-to-markdown": "^2.0.1",
     "stream-buffers": "^3.0.1"
-  }
+  },
+  "prepublish": [
+    "gen-readme"
+  ]
 }

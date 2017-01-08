@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "gen-readme": "jsdoc2md lib/**/*.js -c jsdoc.conf --template README.hbs > README.md"
+    "verb": "verb"
   },
   "repository": {
     "type": "git",
@@ -29,9 +29,29 @@
   },
   "devDependencies": {
     "jsdoc-to-markdown": "^2.0.1",
-    "stream-buffers": "^3.0.1"
+    "stream-buffers": "^3.0.1",
+    "readme-badges": "^0.3.3",
+    "readme-includes": "^0.2.9",
+    "verb": "github:verbose/verb#dev",
+    "verb-generate-readme": "^0.3.0"
   },
-  "prepublish": [
-    "gen-readme"
-  ]
+  "verb": {
+    "ignore": [
+      ".git"
+    ],
+    "deps": {
+      "include": [
+        "readme-includes",
+        "readme-badges"
+      ],
+      "ignore": [
+        "support"
+      ]
+    },
+    "related": {
+      "list": [
+        "node-docker-api"
+      ]
+    }
+  }
 }

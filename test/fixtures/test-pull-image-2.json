@@ -1,0 +1,133 @@
+[
+    {
+        "scope": "http://localhost:80",
+        "method": "POST",
+        "path": "/images/create?fromImage=hello-world&tag=latest",
+        "body": {
+            "fromImage": "hello-world",
+            "tag": "latest"
+        },
+        "status": 200,
+        "response": "{\"status\":\"Pulling from library/hello-world\",\"id\":\"latest\"}\r\n{\"status\":\"Digest: sha256:0256e8a36e2070f7bf2d0b0763dbabdd67798512411de4cdcf9431a1feb60fd9\"}\r\n{\"status\":\"Status: Image is up to date for hello-world:latest\"}\r\n",
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:41 GMT",
+            "Connection",
+            "close",
+            "Transfer-Encoding",
+            "chunked"
+        ]
+    },
+    {
+        "scope": "http://localhost:80",
+        "method": "GET",
+        "path": "/images/hello-world:latest/json?0=h&1=e&2=l&3=l&4=o&5=-&6=w&7=o&8=r&9=l&10=d&11=%3A&12=l&13=a&14=t&15=e&16=s&17=t",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Id": "sha256:c54a2cc56cbb2f04003c1cd4507e118af7c0d340fe7e2720f70976c4b75237dc",
+            "RepoTags": [
+                "hello-world:latest"
+            ],
+            "RepoDigests": [
+                "hello-world@sha256:0256e8a36e2070f7bf2d0b0763dbabdd67798512411de4cdcf9431a1feb60fd9"
+            ],
+            "Parent": "",
+            "Comment": "",
+            "Created": "2016-07-01T19:39:27.532838486Z",
+            "Container": "562cadb4d17bbf30b58ab0f6a870be60c8d36d2e401bf637f1d2d7f8afbef666",
+            "ContainerConfig": {
+                "Hostname": "c65bc554a4b7",
+                "Domainname": "",
+                "User": "",
+                "AttachStdin": false,
+                "AttachStdout": false,
+                "AttachStderr": false,
+                "Tty": false,
+                "OpenStdin": false,
+                "StdinOnce": false,
+                "Env": [
+                    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+                ],
+                "Cmd": [
+                    "/bin/sh",
+                    "-c",
+                    "#(nop) CMD [\"/hello\"]"
+                ],
+                "Image": "sha256:0f9bb7da10de694b2babd0c1a3b75582a0db3395625cae5ab0fe537ce1cd831e",
+                "Volumes": null,
+                "WorkingDir": "",
+                "Entrypoint": null,
+                "OnBuild": null,
+                "Labels": {}
+            },
+            "DockerVersion": "1.10.3",
+            "Author": "",
+            "Config": {
+                "Hostname": "c65bc554a4b7",
+                "Domainname": "",
+                "User": "",
+                "AttachStdin": false,
+                "AttachStdout": false,
+                "AttachStderr": false,
+                "Tty": false,
+                "OpenStdin": false,
+                "StdinOnce": false,
+                "Env": [
+                    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+                ],
+                "Cmd": [
+                    "/hello"
+                ],
+                "Image": "sha256:0f9bb7da10de694b2babd0c1a3b75582a0db3395625cae5ab0fe537ce1cd831e",
+                "Volumes": null,
+                "WorkingDir": "",
+                "Entrypoint": null,
+                "OnBuild": null,
+                "Labels": {}
+            },
+            "Architecture": "amd64",
+            "Os": "linux",
+            "Size": 1848,
+            "VirtualSize": 1848,
+            "GraphDriver": {
+                "Name": "overlay2",
+                "Data": {
+                    "MergedDir": "/var/lib/docker/overlay2/ef65528ba52bccd26706a0661a879df301d158ab5955762ce31380ed4799df9a/merged",
+                    "UpperDir": "/var/lib/docker/overlay2/ef65528ba52bccd26706a0661a879df301d158ab5955762ce31380ed4799df9a/diff",
+                    "WorkDir": "/var/lib/docker/overlay2/ef65528ba52bccd26706a0661a879df301d158ab5955762ce31380ed4799df9a/work"
+                }
+            },
+            "RootFS": {
+                "Type": "layers",
+                "Layers": [
+                    "sha256:a02596fdd012f22b03af6ad7d11fa590c57507558357b079c3e8cebceb4262d7"
+                ]
+            }
+        },
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:41 GMT",
+            "Content-Length",
+            "1838",
+            "Connection",
+            "close"
+        ]
+    }
+]

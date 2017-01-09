@@ -1,0 +1,118 @@
+[
+    {
+        "scope": "http://localhost:80",
+        "method": "GET",
+        "path": "/containers/json?all=true",
+        "body": "",
+        "status": 200,
+        "response": [
+            {
+                "Id": "cdfa12e4e1c4a532366404325782d656af939755d602292d360c90fc70313b6c",
+                "Names": [
+                    "/elegant_goodall"
+                ],
+                "Image": "hello-world:latest",
+                "ImageID": "sha256:c54a2cc56cbb2f04003c1cd4507e118af7c0d340fe7e2720f70976c4b75237dc",
+                "Command": "/hello",
+                "Created": 1483989530,
+                "Ports": [],
+                "Labels": {},
+                "State": "removing",
+                "Status": "Removal In Progress",
+                "HostConfig": {
+                    "NetworkMode": "default"
+                },
+                "NetworkSettings": {
+                    "Networks": {
+                        "bridge": {
+                            "IPAMConfig": null,
+                            "Links": null,
+                            "Aliases": null,
+                            "NetworkID": "b1add62dc5dcfe3f84240daa040abd0581f9a7052c0c0541451eab5f81f1ad7c",
+                            "EndpointID": "",
+                            "Gateway": "",
+                            "IPAddress": "",
+                            "IPPrefixLen": 0,
+                            "IPv6Gateway": "",
+                            "GlobalIPv6Address": "",
+                            "GlobalIPv6PrefixLen": 0,
+                            "MacAddress": ""
+                        }
+                    }
+                },
+                "Mounts": []
+            },
+            {
+                "Id": "05db14d5d424625ab8949d6bd8170f36261bbca47a7e816b4e9ab2d8db239c1e",
+                "Names": [
+                    "/zen_austin"
+                ],
+                "Image": "ierceg/node-dev:6.9.1",
+                "ImageID": "sha256:d70b738db2a6979551a1181e59967f40004635467974b921c18926f4b07008b5",
+                "Command": "mocha",
+                "Created": 1483989510,
+                "Ports": [],
+                "Labels": {
+                    "test-label": "test-value"
+                },
+                "State": "running",
+                "Status": "Up 19 seconds",
+                "HostConfig": {
+                    "NetworkMode": "default"
+                },
+                "NetworkSettings": {
+                    "Networks": {
+                        "bridge": {
+                            "IPAMConfig": null,
+                            "Links": null,
+                            "Aliases": null,
+                            "NetworkID": "b1add62dc5dcfe3f84240daa040abd0581f9a7052c0c0541451eab5f81f1ad7c",
+                            "EndpointID": "84e3f33ae53d54ba641e6697468b67dd6749b5ef93c5eba079f1ed1bf7ad2e73",
+                            "Gateway": "172.17.0.1",
+                            "IPAddress": "172.17.0.2",
+                            "IPPrefixLen": 16,
+                            "IPv6Gateway": "",
+                            "GlobalIPv6Address": "",
+                            "GlobalIPv6PrefixLen": 0,
+                            "MacAddress": "non-of-your-business-pal"
+                        }
+                    }
+                },
+                "Mounts": [
+                    {
+                        "Type": "bind",
+                        "Source": "/Users/ierceg/repos/higher-docker-manager",
+                        "Destination": "/package",
+                        "Mode": "",
+                        "RW": true,
+                        "Propagation": ""
+                    },
+                    {
+                        "Type": "bind",
+                        "Source": "/var/run/docker.sock",
+                        "Destination": "/var/run/docker.sock",
+                        "Mode": "",
+                        "RW": true,
+                        "Propagation": ""
+                    }
+                ]
+            }
+        ],
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:52 GMT",
+            "Content-Length",
+            "1749",
+            "Connection",
+            "close"
+        ]
+    }
+]

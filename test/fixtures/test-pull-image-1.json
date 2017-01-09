@@ -1,0 +1,31 @@
+[
+    {
+        "scope": "http://localhost:80",
+        "method": "POST",
+        "path": "/images/create?fromImage=xyz-inexistent&tag=1.2.3",
+        "body": {
+            "fromImage": "xyz-inexistent",
+            "tag": "1.2.3"
+        },
+        "status": 404,
+        "response": {
+            "message": "repository xyz-inexistent not found: does not exist or no pull access"
+        },
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:38 GMT",
+            "Content-Length",
+            "84",
+            "Connection",
+            "close"
+        ]
+    }
+]

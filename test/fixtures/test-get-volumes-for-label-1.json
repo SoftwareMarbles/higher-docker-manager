@@ -1,0 +1,62 @@
+[
+    {
+        "scope": "http://localhost:80",
+        "method": "GET",
+        "path": "/volumes",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Volumes": [
+                {
+                    "Driver": "local",
+                    "Labels": null,
+                    "Mountpoint": "/var/lib/docker/volumes/4fcb5084e9711878d8fa36ea48af6e38676a6d74b97a395e0767573d2009502a/_data",
+                    "Name": "4fcb5084e9711878d8fa36ea48af6e38676a6d74b97a395e0767573d2009502a",
+                    "Options": {},
+                    "Scope": "local"
+                },
+                {
+                    "Driver": "local",
+                    "Labels": null,
+                    "Mountpoint": "/var/lib/docker/volumes/79eb2883194d6c26c8b11fa2af068371e7d67e15d9c37947ffb686e9c6532f16/_data",
+                    "Name": "79eb2883194d6c26c8b11fa2af068371e7d67e15d9c37947ffb686e9c6532f16",
+                    "Options": {},
+                    "Scope": "local"
+                },
+                {
+                    "Driver": "local",
+                    "Labels": null,
+                    "Mountpoint": "/var/lib/docker/volumes/undefined/_data",
+                    "Name": "undefined",
+                    "Options": {},
+                    "Scope": "local"
+                },
+                {
+                    "Driver": "local",
+                    "Labels": null,
+                    "Mountpoint": "/var/lib/docker/volumes/81a89ab1377ece601396cf77c9f5737270d4718b9ca17d30a37fd19ed39c5a1b/_data",
+                    "Name": "81a89ab1377ece601396cf77c9f5737270d4718b9ca17d30a37fd19ed39c5a1b",
+                    "Options": {},
+                    "Scope": "local"
+                }
+            ],
+            "Warnings": null
+        },
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:52 GMT",
+            "Content-Length",
+            "1854",
+            "Connection",
+            "close"
+        ]
+    }
+]

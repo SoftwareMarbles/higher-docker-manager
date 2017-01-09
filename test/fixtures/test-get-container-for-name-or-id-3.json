@@ -1,0 +1,381 @@
+[
+    {
+        "scope": "http://localhost:80",
+        "method": "GET",
+        "path": "/containers/json?all=true",
+        "body": "",
+        "status": 200,
+        "response": [
+            {
+                "Id": "81db592caa439520ce66e8a016281e450db05170da71f30bf282c87c77e6416c",
+                "Names": [
+                    "/adoring_sinoussi"
+                ],
+                "Image": "ierceg/node-dev:6.9.1",
+                "ImageID": "sha256:d70b738db2a6979551a1181e59967f40004635467974b921c18926f4b07008b5",
+                "Command": "mocha",
+                "Created": 1483989550,
+                "Ports": [],
+                "Labels": {
+                    "test-label": "test-value"
+                },
+                "State": "running",
+                "Status": "Up 4 seconds",
+                "HostConfig": {
+                    "NetworkMode": "default"
+                },
+                "NetworkSettings": {
+                    "Networks": {
+                        "bridge": {
+                            "IPAMConfig": null,
+                            "Links": null,
+                            "Aliases": null,
+                            "NetworkID": "b1add62dc5dcfe3f84240daa040abd0581f9a7052c0c0541451eab5f81f1ad7c",
+                            "EndpointID": "c5621a1bc52e349455c098cb07671b6fca54a768be661e4ac976e076cf9595d7",
+                            "Gateway": "172.17.0.1",
+                            "IPAddress": "172.17.0.2",
+                            "IPPrefixLen": 16,
+                            "IPv6Gateway": "",
+                            "GlobalIPv6Address": "",
+                            "GlobalIPv6PrefixLen": 0,
+                            "MacAddress": "non-of-your-business-pal"
+                        }
+                    }
+                },
+                "Mounts": [
+                    {
+                        "Type": "bind",
+                        "Source": "/Users/ierceg/repos/higher-docker-manager",
+                        "Destination": "/package",
+                        "Mode": "",
+                        "RW": true,
+                        "Propagation": ""
+                    },
+                    {
+                        "Type": "bind",
+                        "Source": "/var/run/docker.sock",
+                        "Destination": "/var/run/docker.sock",
+                        "Mode": "",
+                        "RW": true,
+                        "Propagation": ""
+                    }
+                ]
+            }
+        ],
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:19:16 GMT",
+            "Content-Length",
+            "1065",
+            "Connection",
+            "close"
+        ]
+    },
+    {
+        "scope": "http://localhost:80",
+        "method": "GET",
+        "path": "/containers/81db592caa439520ce66e8a016281e450db05170da71f30bf282c87c77e6416c/json",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Id": "81db592caa439520ce66e8a016281e450db05170da71f30bf282c87c77e6416c",
+            "Created": "2017-01-09T19:19:10.943710428Z",
+            "Path": "mocha",
+            "Args": [],
+            "State": {
+                "Status": "running",
+                "Running": true,
+                "Paused": false,
+                "Restarting": false,
+                "OOMKilled": false,
+                "Dead": false,
+                "Pid": 17316,
+                "ExitCode": 0,
+                "Error": "",
+                "StartedAt": "2017-01-09T19:19:11.93566486Z",
+                "FinishedAt": "0001-01-01T00:00:00Z"
+            },
+            "Image": "sha256:d70b738db2a6979551a1181e59967f40004635467974b921c18926f4b07008b5",
+            "ResolvConfPath": "/var/lib/docker/containers/81db592caa439520ce66e8a016281e450db05170da71f30bf282c87c77e6416c/resolv.conf",
+            "HostnamePath": "/var/lib/docker/containers/81db592caa439520ce66e8a016281e450db05170da71f30bf282c87c77e6416c/hostname",
+            "HostsPath": "/var/lib/docker/containers/81db592caa439520ce66e8a016281e450db05170da71f30bf282c87c77e6416c/hosts",
+            "LogPath": "/var/lib/docker/containers/81db592caa439520ce66e8a016281e450db05170da71f30bf282c87c77e6416c/81db592caa439520ce66e8a016281e450db05170da71f30bf282c87c77e6416c-json.log",
+            "Name": "/adoring_sinoussi",
+            "RestartCount": 0,
+            "Driver": "overlay2",
+            "MountLabel": "",
+            "ProcessLabel": "",
+            "AppArmorProfile": "",
+            "ExecIDs": null,
+            "HostConfig": {
+                "Binds": [
+                    "/Users/ierceg/repos/higher-docker-manager:/package",
+                    "/var/run/docker.sock:/var/run/docker.sock"
+                ],
+                "ContainerIDFile": "",
+                "LogConfig": {
+                    "Type": "json-file",
+                    "Config": {}
+                },
+                "NetworkMode": "default",
+                "PortBindings": {},
+                "RestartPolicy": {
+                    "Name": "no",
+                    "MaximumRetryCount": 0
+                },
+                "AutoRemove": true,
+                "VolumeDriver": "",
+                "VolumesFrom": null,
+                "CapAdd": null,
+                "CapDrop": null,
+                "Dns": [],
+                "DnsOptions": [],
+                "DnsSearch": [],
+                "ExtraHosts": null,
+                "GroupAdd": null,
+                "IpcMode": "",
+                "Cgroup": "",
+                "Links": null,
+                "OomScoreAdj": 0,
+                "PidMode": "",
+                "Privileged": false,
+                "PublishAllPorts": false,
+                "ReadonlyRootfs": false,
+                "SecurityOpt": null,
+                "UTSMode": "",
+                "UsernsMode": "",
+                "ShmSize": 67108864,
+                "Runtime": "runc",
+                "ConsoleSize": [
+                    0,
+                    0
+                ],
+                "Isolation": "",
+                "CpuShares": 0,
+                "Memory": 0,
+                "NanoCpus": 0,
+                "CgroupParent": "",
+                "BlkioWeight": 0,
+                "BlkioWeightDevice": null,
+                "BlkioDeviceReadBps": null,
+                "BlkioDeviceWriteBps": null,
+                "BlkioDeviceReadIOps": null,
+                "BlkioDeviceWriteIOps": null,
+                "CpuPeriod": 0,
+                "CpuQuota": 0,
+                "CpuRealtimePeriod": 0,
+                "CpuRealtimeRuntime": 0,
+                "CpusetCpus": "",
+                "CpusetMems": "",
+                "Devices": [],
+                "DiskQuota": 0,
+                "KernelMemory": 0,
+                "MemoryReservation": 0,
+                "MemorySwap": 0,
+                "MemorySwappiness": -1,
+                "OomKillDisable": false,
+                "PidsLimit": 0,
+                "Ulimits": null,
+                "CpuCount": 0,
+                "CpuPercent": 0,
+                "IOMaximumIOps": 0,
+                "IOMaximumBandwidth": 0
+            },
+            "GraphDriver": {
+                "Name": "overlay2",
+                "Data": {
+                    "LowerDir": "/var/lib/docker/overlay2/9262c458a23070f60af08e50e9dfe6222cf98f645ed0b85e98e16a90bf98e4ff-init/diff:/var/lib/docker/overlay2/c1af96d78a0116ed5acb157e30da95b6992d6240b756d6c037aae989fddf0ced/diff:/var/lib/docker/overlay2/896e3321de9146fa99aafb84317e3df412a8c347a0736b13e0b8142cb3e1b353/diff:/var/lib/docker/overlay2/842ba8abe5c9383c491d6759d48c359e3f7aecd97f247af1000f1e8ace114576/diff:/var/lib/docker/overlay2/fd98c3680331a74423d82fa50da2c09f55a117ab550adb9009eb7589301484db/diff:/var/lib/docker/overlay2/0e4a2eaf927f55b49fbedb1eee8c9b9844125c4439eb57a203311e491d1fff33/diff:/var/lib/docker/overlay2/1018b7140c613048bc405b173b4f97675e380e2ab5d223c1f3b65e9053ec36aa/diff:/var/lib/docker/overlay2/c9d0160caf28132581dee6728447471d1e083e57038e066a84ba1e6f1c6c53ee/diff:/var/lib/docker/overlay2/626ceac6c35af66bbda3c1385c064b132eacee8335d03b7fcb4399cbcfb1a194/diff",
+                    "MergedDir": "/var/lib/docker/overlay2/9262c458a23070f60af08e50e9dfe6222cf98f645ed0b85e98e16a90bf98e4ff/merged",
+                    "UpperDir": "/var/lib/docker/overlay2/9262c458a23070f60af08e50e9dfe6222cf98f645ed0b85e98e16a90bf98e4ff/diff",
+                    "WorkDir": "/var/lib/docker/overlay2/9262c458a23070f60af08e50e9dfe6222cf98f645ed0b85e98e16a90bf98e4ff/work"
+                }
+            },
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/Users/ierceg/repos/higher-docker-manager",
+                    "Destination": "/package",
+                    "Mode": "",
+                    "RW": true,
+                    "Propagation": ""
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/var/run/docker.sock",
+                    "Destination": "/var/run/docker.sock",
+                    "Mode": "",
+                    "RW": true,
+                    "Propagation": ""
+                }
+            ],
+            "Config": {
+                "Hostname": "test-hostname",
+                "Domainname": "",
+                "User": "",
+                "AttachStdin": false,
+                "AttachStdout": true,
+                "AttachStderr": true,
+                "Tty": true,
+                "OpenStdin": false,
+                "StdinOnce": false,
+                "Env": [
+                    "NOCK_BACK_MODE=record",
+                    "no_proxy=*.local, 169.254/16",
+                    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                    "NPM_CONFIG_LOGLEVEL=info",
+                    "NODE_VERSION=6.9.1"
+                ],
+                "Cmd": [
+                    "mocha"
+                ],
+                "Image": "ierceg/node-dev:6.9.1",
+                "Volumes": null,
+                "WorkingDir": "/package",
+                "Entrypoint": null,
+                "OnBuild": null,
+                "Labels": {
+                    "test-label": "test-value"
+                }
+            },
+            "NetworkSettings": {
+                "Bridge": "",
+                "SandboxID": "9e7ff4e9e8881d7344163919f50bd41d23b678d1cdbfc7996c3a0cbe5847b6cf",
+                "HairpinMode": false,
+                "LinkLocalIPv6Address": "",
+                "LinkLocalIPv6PrefixLen": 0,
+                "Ports": {},
+                "SandboxKey": "/var/run/docker/netns/9e7ff4e9e888",
+                "SecondaryIPAddresses": null,
+                "SecondaryIPv6Addresses": null,
+                "EndpointID": "c5621a1bc52e349455c098cb07671b6fca54a768be661e4ac976e076cf9595d7",
+                "Gateway": "172.17.0.1",
+                "GlobalIPv6Address": "",
+                "GlobalIPv6PrefixLen": 0,
+                "IPAddress": "172.17.0.2",
+                "IPPrefixLen": 16,
+                "IPv6Gateway": "",
+                "MacAddress": "non-of-your-business-pal",
+                "Networks": {
+                    "bridge": {
+                        "IPAMConfig": null,
+                        "Links": null,
+                        "Aliases": null,
+                        "NetworkID": "b1add62dc5dcfe3f84240daa040abd0581f9a7052c0c0541451eab5f81f1ad7c",
+                        "EndpointID": "c5621a1bc52e349455c098cb07671b6fca54a768be661e4ac976e076cf9595d7",
+                        "Gateway": "172.17.0.1",
+                        "IPAddress": "172.17.0.2",
+                        "IPPrefixLen": 16,
+                        "IPv6Gateway": "",
+                        "GlobalIPv6Address": "",
+                        "GlobalIPv6PrefixLen": 0,
+                        "MacAddress": "non-of-your-business-pal"
+                    }
+                }
+            }
+        },
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:19:16 GMT",
+            "Connection",
+            "close",
+            "Transfer-Encoding",
+            "chunked"
+        ]
+    },
+    {
+        "scope": "http://localhost:80",
+        "method": "GET",
+        "path": "/containers/json?all=true",
+        "body": "",
+        "status": 200,
+        "response": [
+            {
+                "Id": "81db592caa439520ce66e8a016281e450db05170da71f30bf282c87c77e6416c",
+                "Names": [
+                    "/adoring_sinoussi"
+                ],
+                "Image": "ierceg/node-dev:6.9.1",
+                "ImageID": "sha256:d70b738db2a6979551a1181e59967f40004635467974b921c18926f4b07008b5",
+                "Command": "mocha",
+                "Created": 1483989550,
+                "Ports": [],
+                "Labels": {
+                    "test-label": "test-value"
+                },
+                "State": "running",
+                "Status": "Up 4 seconds",
+                "HostConfig": {
+                    "NetworkMode": "default"
+                },
+                "NetworkSettings": {
+                    "Networks": {
+                        "bridge": {
+                            "IPAMConfig": null,
+                            "Links": null,
+                            "Aliases": null,
+                            "NetworkID": "b1add62dc5dcfe3f84240daa040abd0581f9a7052c0c0541451eab5f81f1ad7c",
+                            "EndpointID": "c5621a1bc52e349455c098cb07671b6fca54a768be661e4ac976e076cf9595d7",
+                            "Gateway": "172.17.0.1",
+                            "IPAddress": "172.17.0.2",
+                            "IPPrefixLen": 16,
+                            "IPv6Gateway": "",
+                            "GlobalIPv6Address": "",
+                            "GlobalIPv6PrefixLen": 0,
+                            "MacAddress": "non-of-your-business-pal"
+                        }
+                    }
+                },
+                "Mounts": [
+                    {
+                        "Type": "bind",
+                        "Source": "/Users/ierceg/repos/higher-docker-manager",
+                        "Destination": "/package",
+                        "Mode": "",
+                        "RW": true,
+                        "Propagation": ""
+                    },
+                    {
+                        "Type": "bind",
+                        "Source": "/var/run/docker.sock",
+                        "Destination": "/var/run/docker.sock",
+                        "Mode": "",
+                        "RW": true,
+                        "Propagation": ""
+                    }
+                ]
+            }
+        ],
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:19:16 GMT",
+            "Content-Length",
+            "1065",
+            "Connection",
+            "close"
+        ]
+    }
+]

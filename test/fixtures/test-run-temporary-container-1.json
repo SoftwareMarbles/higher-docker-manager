@@ -1,0 +1,232 @@
+[
+    {
+        "scope": "http://localhost:80",
+        "method": "POST",
+        "path": "/images/create?fromImage=hello-world&tag=latest",
+        "body": {
+            "fromImage": "hello-world",
+            "tag": "latest"
+        },
+        "status": 200,
+        "response": "{\"status\":\"Pulling from library/hello-world\",\"id\":\"latest\"}\r\n{\"status\":\"Digest: sha256:0256e8a36e2070f7bf2d0b0763dbabdd67798512411de4cdcf9431a1feb60fd9\"}\r\n{\"status\":\"Status: Image is up to date for hello-world:latest\"}\r\n",
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:50 GMT",
+            "Connection",
+            "close",
+            "Transfer-Encoding",
+            "chunked"
+        ]
+    },
+    {
+        "scope": "http://localhost:80",
+        "method": "GET",
+        "path": "/images/hello-world:latest/json?0=h&1=e&2=l&3=l&4=o&5=-&6=w&7=o&8=r&9=l&10=d&11=%3A&12=l&13=a&14=t&15=e&16=s&17=t",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Id": "sha256:c54a2cc56cbb2f04003c1cd4507e118af7c0d340fe7e2720f70976c4b75237dc",
+            "RepoTags": [
+                "hello-world:latest"
+            ],
+            "RepoDigests": [
+                "hello-world@sha256:0256e8a36e2070f7bf2d0b0763dbabdd67798512411de4cdcf9431a1feb60fd9"
+            ],
+            "Parent": "",
+            "Comment": "",
+            "Created": "2016-07-01T19:39:27.532838486Z",
+            "Container": "562cadb4d17bbf30b58ab0f6a870be60c8d36d2e401bf637f1d2d7f8afbef666",
+            "ContainerConfig": {
+                "Hostname": "c65bc554a4b7",
+                "Domainname": "",
+                "User": "",
+                "AttachStdin": false,
+                "AttachStdout": false,
+                "AttachStderr": false,
+                "Tty": false,
+                "OpenStdin": false,
+                "StdinOnce": false,
+                "Env": [
+                    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+                ],
+                "Cmd": [
+                    "/bin/sh",
+                    "-c",
+                    "#(nop) CMD [\"/hello\"]"
+                ],
+                "Image": "sha256:0f9bb7da10de694b2babd0c1a3b75582a0db3395625cae5ab0fe537ce1cd831e",
+                "Volumes": null,
+                "WorkingDir": "",
+                "Entrypoint": null,
+                "OnBuild": null,
+                "Labels": {}
+            },
+            "DockerVersion": "1.10.3",
+            "Author": "",
+            "Config": {
+                "Hostname": "c65bc554a4b7",
+                "Domainname": "",
+                "User": "",
+                "AttachStdin": false,
+                "AttachStdout": false,
+                "AttachStderr": false,
+                "Tty": false,
+                "OpenStdin": false,
+                "StdinOnce": false,
+                "Env": [
+                    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+                ],
+                "Cmd": [
+                    "/hello"
+                ],
+                "Image": "sha256:0f9bb7da10de694b2babd0c1a3b75582a0db3395625cae5ab0fe537ce1cd831e",
+                "Volumes": null,
+                "WorkingDir": "",
+                "Entrypoint": null,
+                "OnBuild": null,
+                "Labels": {}
+            },
+            "Architecture": "amd64",
+            "Os": "linux",
+            "Size": 1848,
+            "VirtualSize": 1848,
+            "GraphDriver": {
+                "Name": "overlay2",
+                "Data": {
+                    "MergedDir": "/var/lib/docker/overlay2/ef65528ba52bccd26706a0661a879df301d158ab5955762ce31380ed4799df9a/merged",
+                    "UpperDir": "/var/lib/docker/overlay2/ef65528ba52bccd26706a0661a879df301d158ab5955762ce31380ed4799df9a/diff",
+                    "WorkDir": "/var/lib/docker/overlay2/ef65528ba52bccd26706a0661a879df301d158ab5955762ce31380ed4799df9a/work"
+                }
+            },
+            "RootFS": {
+                "Type": "layers",
+                "Layers": [
+                    "sha256:a02596fdd012f22b03af6ad7d11fa590c57507558357b079c3e8cebceb4262d7"
+                ]
+            }
+        },
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:50 GMT",
+            "Content-Length",
+            "1838",
+            "Connection",
+            "close"
+        ]
+    },
+    {
+        "scope": "http://localhost:80",
+        "method": "POST",
+        "path": "/containers/create?image=hello-world%3Alatest",
+        "body": {
+            "image": "hello-world:latest"
+        },
+        "status": 201,
+        "response": {
+            "Id": "cdfa12e4e1c4a532366404325782d656af939755d602292d360c90fc70313b6c",
+            "Warnings": null
+        },
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:50 GMT",
+            "Content-Length",
+            "90",
+            "Connection",
+            "close"
+        ]
+    },
+    {
+        "scope": "http://localhost:80",
+        "method": "POST",
+        "path": "/containers/cdfa12e4e1c4a532366404325782d656af939755d602292d360c90fc70313b6c/start",
+        "body": {},
+        "status": 204,
+        "response": "",
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:51 GMT",
+            "Connection",
+            "close"
+        ]
+    },
+    {
+        "scope": "http://localhost:80",
+        "method": "POST",
+        "path": "/containers/cdfa12e4e1c4a532366404325782d656af939755d602292d360c90fc70313b6c/wait",
+        "body": {},
+        "status": 200,
+        "response": {
+            "StatusCode": 0
+        },
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Content-Type",
+            "application/json",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:52 GMT",
+            "Content-Length",
+            "17",
+            "Connection",
+            "close"
+        ]
+    },
+    {
+        "scope": "http://localhost:80",
+        "method": "GET",
+        "path": "/containers/cdfa12e4e1c4a532366404325782d656af939755d602292d360c90fc70313b6c/logs?follow=true&stdout=true&stderr=true",
+        "body": "",
+        "status": 200,
+        "response": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0001\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0013Hello from Docker!\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000KThis message shows that your installation appears to be working correctly.\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0001\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000;To generate this message, Docker took the following steps:\n\u0001\u0000\u0000\u0000\u0000\u0000\u00003 1. The Docker client contacted the Docker daemon.\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000J 2. The Docker daemon pulled the \"hello-world\" image from the Docker Hub.\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000M 3. The Docker daemon created a new container from that image which runs the\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000C    executable that produces the output you are currently reading.\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000O 4. The Docker daemon streamed that output to the Docker client, which sent it\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0016    to your terminal.\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0001\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000GTo try something more ambitious, you can run an Ubuntu container with:\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u001e $ docker run -it ubuntu bash\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0001\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000KShare images, automate workflows, and more with a free Docker Hub account:\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0018 https://hub.docker.com\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0001\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000$For more examples and ideas, visit:\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000+ https://docs.docker.com/engine/userguide/\n\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0001\n",
+        "rawHeaders": [
+            "Api-Version",
+            "1.25",
+            "Docker-Experimental",
+            "true",
+            "Server",
+            "Docker/1.13.0-rc5 (linux)",
+            "Date",
+            "Mon, 09 Jan 2017 19:18:52 GMT",
+            "Content-Type",
+            "text/plain; charset=utf-8",
+            "Connection",
+            "close",
+            "Transfer-Encoding",
+            "chunked"
+        ]
+    }
+]

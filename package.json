@@ -1,6 +1,6 @@
 {
   "name": "higher-docker-manager",
-  "version": "1.6.0",
+  "version": "1.6.3",
   "description": "Docker management package with higher-level functions",
   "main": "index.js",
   "scripts": {
@@ -32,13 +32,20 @@
     "lodash": "^4.17.2",
     "selectn": "^1.1.1"
   },
+  "engines": {
+    "node": ">=6"
+  },
   "peerDependencies": {
     "node-docker-api": "^1.1.2"
   },
   "devDependencies": {
-    "stream-buffers": "^3.0.1",
+    "mocha": "^3.2.0",
+    "nock": "github:ierceg/nock#promisify-nock-back",
+    "node-docker-api": "^1.1.2",
     "readme-badges": "^0.3.3",
     "readme-includes": "^0.2.9",
+    "stream-buffers": "^3.0.1",
+    "testdouble": "^1.10.2",
     "verb": "github:verbose/verb#dev",
     "verb-generate-readme": "^0.3.0"
   },

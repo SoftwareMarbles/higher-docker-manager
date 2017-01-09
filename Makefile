@@ -7,6 +7,7 @@ test:
 		-v '/var/run/docker.sock:/var/run/docker.sock' \
 		--workdir /package \
 		-l 'test-label=test-value' \
+		-e NOCK_BACK_MODE=record \
 		ierceg/node-dev:6.9.1 \
 		mocha
 
@@ -16,6 +17,7 @@ test-cont:
 		-v '/var/run/docker.sock:/var/run/docker.sock' \
 		--workdir /package \
 		-l 'test-label=test-value' \
+		-e NOCK_BACK_MODE=record \
 		ierceg/node-dev:6.9.1 \
 		nodemon -V -d 1 -L -w /package --exec mocha
 
@@ -25,6 +27,7 @@ coverage:
 		-v '/var/run/docker.sock:/var/run/docker.sock' \
 		--workdir /package \
 		-l 'test-label=test-value' \
+		-e NOCK_BACK_MODE=record \
 		ierceg/node-dev:6.9.1 \
 		istanbul cover _mocha -- --recursive && istanbul report text
 

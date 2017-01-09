@@ -15,7 +15,13 @@
     "docker",
     "management"
   ],
-  "author": "Ivan Erceg",
+  "author": {
+    "name": "Ivan Erceg",
+    "url": "https://github.com/ierceg",
+    "title": "Software Shipper",
+    "username": "ierceg",
+    "twitter": "ierceg"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SoftwareMarbles/higher-docker-manager/issues"
@@ -24,11 +30,12 @@
   "dependencies": {
     "debug": "^2.6.0",
     "lodash": "^4.17.2",
-    "node-docker-api": "^1.1.2",
     "selectn": "^1.1.1"
   },
+  "peerDependencies": {
+    "node-docker-api": "^1.1.2"
+  },
   "devDependencies": {
-    "jsdoc-to-markdown": "^2.0.1",
     "stream-buffers": "^3.0.1",
     "readme-badges": "^0.3.3",
     "readme-includes": "^0.2.9",

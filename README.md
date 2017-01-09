@@ -211,9 +211,23 @@ Converts container output buffers into a single string.
 
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](../../issues/new).
 
-Please read the [contributing guide](.github/contributing.md) for advice on opening issues, pull requests, and coding standards.
+Please read the [contributing guide](.github/contributing.md) for avice on opening issues, pull requests, and coding standards.
 
 ## Revision history
+
+#### v1.6.3 - 2017-01-09
+##### Fixed
+* Limited package to require node 6 and later.
+* Limited tests to run on node 6 and later.
+* Fixed failing tests due to lack of node-docker-api in dev dependencies.
+
+#### v1.6.2 - 2017-01-09
+##### Added
+* Mocha to dev dependencies.
+
+#### v1.6.1 - 2017-01-09
+##### Changed
+* Tests are mocked with nock instead of making actual requests to Docker. It's hacky but it will do for now.
 
 #### v1.6.0 - 2017-01-08
 ##### Added

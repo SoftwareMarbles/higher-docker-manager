@@ -1,6 +1,6 @@
 {
   "name": "higher-docker-manager",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "description": "Docker management package with higher-level functions",
   "main": "index.js",
   "scripts": {
@@ -30,8 +30,8 @@
   "dependencies": {
     "debug": "^2.6.0",
     "lodash": "^4.17.2",
-    "selectn": "^1.1.1",
-    "node-docker-api": "1.1.2"
+    "node-docker-api": "1.1.2",
+    "selectn": "^1.1.1"
   },
   "engines": {
     "node": ">=6"

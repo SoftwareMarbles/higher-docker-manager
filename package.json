@@ -1,6 +1,6 @@
 {
   "name": "higher-docker-manager",
-  "version": "1.6.5",
+  "version": "1.7.0",
   "description": "Docker management package with higher-level functions",
   "main": "index.js",
   "scripts": {

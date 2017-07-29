@@ -33,7 +33,7 @@ describe('HigherDockerManager', function () {
     describe('pullImage', function () {
         it('issues an error on unknown image', function () {
             this.timeout(20000);
-            return nockBack('test-pull-image-1.json').then(({nockDone}) =>
+            return nockBack('test-pull-image-1.json').then(({ nockDone }) =>
                 HigherDockerManager.pullImage({}, 'xyz-inexistent', '1.2.3')
                     .then(() => {
                         assert(false);
@@ -50,7 +50,7 @@ describe('HigherDockerManager', function () {
 
         it('returns image object on success', function () {
             this.timeout(100000);
-            return nockBack('test-pull-image-2.json').then(({nockDone}) =>
+            return nockBack('test-pull-image-2.json').then(({ nockDone }) =>
                 HigherDockerManager.pullImage({}, 'hello-world', 'latest')
                     .then((image) => {
                         assert(image);
@@ -66,7 +66,7 @@ describe('HigherDockerManager', function () {
 
         it('returns image object on success with name and tag in name', function () {
             this.timeout(100000);
-            return nockBack('test-pull-image-3.json').then(({nockDone}) =>
+            return nockBack('test-pull-image-3.json').then(({ nockDone }) =>
                 HigherDockerManager.pullImage({}, 'hello-world:latest')
                     .then((image) => {
                         assert(image);
@@ -82,7 +82,7 @@ describe('HigherDockerManager', function () {
 
         it('returns image object on success with name and tag in name (2)', function () {
             this.timeout(100000);
-            return nockBack('test-pull-image-4.json').then(({nockDone}) =>
+            return nockBack('test-pull-image-4.json').then(({ nockDone }) =>
                 HigherDockerManager.pullImage({}, 'hello-world')
                     .then((image) => {
                         assert(image);
@@ -98,7 +98,7 @@ describe('HigherDockerManager', function () {
 
         it('returns image object on success with name and tag in name (3)', function () {
             this.timeout(100000);
-            return nockBack('test-pull-image-5.json').then(({nockDone}) =>
+            return nockBack('test-pull-image-5.json').then(({ nockDone }) =>
                 HigherDockerManager.pullImage({}, 'hello-world', 'latest')
                     .then((image) => {
                         assert(image);
@@ -116,7 +116,7 @@ describe('HigherDockerManager', function () {
     describe('runTemporaryContainer', function () {
         this.timeout(100000);
         it('works', function () {
-            return nockBack('test-run-temporary-container-1.json').then(({nockDone}) =>
+            return nockBack('test-run-temporary-container-1.json').then(({ nockDone }) =>
                 HigherDockerManager.pullImage({}, 'hello-world:latest')
                     .then(() => HigherDockerManager.runTemporaryContainer({
                         image: 'hello-world:latest'
@@ -183,7 +183,7 @@ describe('HigherDockerManager', function () {
 
     describe('getContainerForNameOrId', function () {
         it('returns null on unknown container ID or name', function () {
-            return nockBack('test-get-container-for-name-or-id-1.json').then(({nockDone}) =>
+            return nockBack('test-get-container-for-name-or-id-1.json').then(({ nockDone }) =>
                 HigherDockerManager.getContainerForNameOrId('xyz-inexistent')
                     .then((container) => {
                         assert(_.isNull(container));
@@ -193,7 +193,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns container for good ID', function () {
-            return nockBack('test-get-container-for-name-or-id-2.json').then(({nockDone}) =>
+            return nockBack('test-get-container-for-name-or-id-2.json').then(({ nockDone }) =>
                 HigherDockerManager.getOwnContainer()
                     .then((container) => {
                         assert(container);
@@ -207,7 +207,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns container for good name', function () {
-            return nockBack('test-get-container-for-name-or-id-3.json').then(({nockDone}) =>
+            return nockBack('test-get-container-for-name-or-id-3.json').then(({ nockDone }) =>
                 HigherDockerManager.getOwnContainer()
                     .then((container) => {
                         assert(container);
@@ -223,7 +223,7 @@ describe('HigherDockerManager', function () {
 
     describe('getContainersForImage', function () {
         it('returns empty on unknown image:tag', function () {
-            return nockBack('test-get-container-for-image-1.json').then(({nockDone}) =>
+            return nockBack('test-get-container-for-image-1.json').then(({ nockDone }) =>
                 HigherDockerManager.getContainersForImage('xyz-inexistent:1.2.3')
                     .then((containers) => {
                         assert(_.isEmpty(containers));
@@ -233,7 +233,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns container for good label:name', function () {
-            return nockBack('test-get-container-for-image-2.json').then(({nockDone}) =>
+            return nockBack('test-get-container-for-image-2.json').then(({ nockDone }) =>
                 HigherDockerManager.getOwnContainer()
                     .then((container) => {
                         assert(container);
@@ -249,7 +249,7 @@ describe('HigherDockerManager', function () {
 
     describe('getVolumesForLabel', function () {
         it('returns empty on bad args', function () {
-            return nockBack('test-get-volumes-for-label-1.json').then(({nockDone}) =>
+            return nockBack('test-get-volumes-for-label-1.json').then(({ nockDone }) =>
                 HigherDockerManager.getVolumesForLabel()
                     .then((containers) => {
                         assert(_.isEmpty(containers));
@@ -259,7 +259,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns empty on unknown label', function () {
-            return nockBack('test-get-volumes-for-label-2.json').then(({nockDone}) =>
+            return nockBack('test-get-volumes-for-label-2.json').then(({ nockDone }) =>
                 HigherDockerManager.getVolumesForLabel('xyz-inexistent', '')
                     .then((containers) => {
                         assert(_.isEmpty(containers));
@@ -269,7 +269,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns empty on test label but inexistent value', function () {
-            return nockBack('test-get-volumes-for-label-3.json').then(({nockDone}) =>
+            return nockBack('test-get-volumes-for-label-3.json').then(({ nockDone }) =>
                 HigherDockerManager.getVolumesForLabel('test-label', 'xyz-inexistent')
                     .then((containers) => {
                         assert(_.isEmpty(containers));
@@ -281,7 +281,7 @@ describe('HigherDockerManager', function () {
 
     describe('getNetworksForLabel', function () {
         it('returns empty on bad args', function () {
-            return nockBack('test-get-networks-for-label-1.json').then(({nockDone}) =>
+            return nockBack('test-get-networks-for-label-1.json').then(({ nockDone }) =>
                 HigherDockerManager.getNetworksForLabel()
                     .then((containers) => {
                         assert(_.isEmpty(containers));
@@ -291,7 +291,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns empty on unknown label', function () {
-            return nockBack('test-get-networks-for-label-2.json').then(({nockDone}) =>
+            return nockBack('test-get-networks-for-label-2.json').then(({ nockDone }) =>
                 HigherDockerManager.getNetworksForLabel('xyz-inexistent', '')
                     .then((containers) => {
                         assert(_.isEmpty(containers));
@@ -301,7 +301,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns empty on test label but inexistent value', function () {
-            return nockBack('test-get-networks-for-label-3.json').then(({nockDone}) =>
+            return nockBack('test-get-networks-for-label-3.json').then(({ nockDone }) =>
                 HigherDockerManager.getNetworksForLabel('test-label', 'xyz-inexistent')
                     .then((containers) => {
                         assert(_.isEmpty(containers));
@@ -313,7 +313,7 @@ describe('HigherDockerManager', function () {
 
     describe('getContainersForNetwork', function () {
         it('returns empty on empty network names', function () {
-            return nockBack('test-get-containers-for-networks-1.json').then(({nockDone}) =>
+            return nockBack('test-get-containers-for-networks-1.json').then(({ nockDone }) =>
                 HigherDockerManager.getContainersInNetworks([])
                     .then((containers) => {
                         assert(_.isEmpty(containers));
@@ -323,7 +323,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns empty on unknown network names', function () {
-            return nockBack('test-get-containers-for-networks-2.json').then(({nockDone}) =>
+            return nockBack('test-get-containers-for-networks-2.json').then(({ nockDone }) =>
                 HigherDockerManager.getContainersInNetworks(['xyz-inexistent-network'])
                     .then((containers) => {
                         assert(_.isEmpty(containers));
@@ -333,7 +333,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns container for same network as this container', function () {
-            return nockBack('test-get-containers-for-networks-3.json').then(({nockDone}) =>
+            return nockBack('test-get-containers-for-networks-3.json').then(({ nockDone }) =>
                 HigherDockerManager.getOwnContainer()
                     .then((container) => {
                         assert(container);
@@ -350,7 +350,7 @@ describe('HigherDockerManager', function () {
 
     describe('getNetworkForNameOrId', function () {
         it('returns null on unknown ID or name', function () {
-            return nockBack('test-get-network-for-name-or-id-1.json').then(({nockDone}) =>
+            return nockBack('test-get-network-for-name-or-id-1.json').then(({ nockDone }) =>
                 HigherDockerManager.getNetworkForNameOrId('xyz-inexistent')
                     .then((container) => {
                         assert(_.isNull(container));
@@ -360,7 +360,7 @@ describe('HigherDockerManager', function () {
         });
 
         it('returns object for good name', function () {
-            return nockBack('test-get-network-for-name-or-id-2.json').then(({nockDone}) =>
+            return nockBack('test-get-network-for-name-or-id-2.json').then(({ nockDone }) =>
                 HigherDockerManager.getOwnContainer()
                     .then((container) => {
                         assert(container);

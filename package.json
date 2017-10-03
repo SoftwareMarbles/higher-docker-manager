@@ -37,7 +37,7 @@
     "node": ">=6"
   },
   "devDependencies": {
-    "mocha": "^3.2.0",
+    "mocha": "^4.0.0",
     "nock": "github:ierceg/nock#promisify-nock-back",
     "readme-badges": "^0.3.3",
     "readme-includes": "^0.2.9",

@@ -1324,20 +1324,7 @@ date-store@^0.1.2:
     os-homedir "^1.0.1"
     write-json "^0.2.2"
 
-date.js@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/date.js/-/date.js-0.3.1.tgz#39e7c7c77adc765d10becf496cacd391332d7cc8"
-  dependencies:
-    debug "~0.7.2"
-    lodash.filter "^4.2.0"
-    lodash.findkey "^4.2.0"
-    lodash.foreach "^4.1.0"
-    lodash.includes "^4.1.0"
-    lodash.isempty "^4.1.2"
-    lodash.partition "^4.2.0"
-    lodash.trim "^4.2.0"
-
-"date.js@github:matthewmueller/date":
+date.js@^0.3.1, "date.js@github:matthewmueller/date":
   version "0.3.1"
   resolved "https://codeload.github.com/matthewmueller/date/tar.gz/ed7d25c0c1a8a5db4626bfb218fcce8e2ae7cb3c"
   dependencies:
@@ -1358,6 +1345,12 @@ debug@^2.2.0, debug@^2.4.1, debug@^2.5.2, debug@^2.6.0:
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.1.tgz#79855090ba2c4e3115cc7d8769491d58f0491351"
   dependencies:
     ms "0.7.2"
+
+debug@^3.2.2:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.4.tgz#82123737c51afbe9609a2b5dfe9664e7487171f0"
+  dependencies:
+    ms "^2.1.1"
 
 debug@~0.7.2:
   version "0.7.4"
@@ -2777,25 +2770,17 @@ lodash.create@3.1.1:
     lodash._basecreate "^3.0.0"
     lodash._isiterateecall "^3.0.0"
 
-lodash.filter@^4.1.0, lodash.filter@^4.2.0:
+lodash.filter@^4.1.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.filter/-/lodash.filter-4.6.0.tgz#668b1d4981603ae1cc5a6fa760143e480b4c4ace"
-
-lodash.findkey@^4.2.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.findkey/-/lodash.findkey-4.6.0.tgz#83058e903b51cbb759d09ccf546dea3ea39c4718"
 
 lodash.flatten@^4.0.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
 
-lodash.foreach@^4.0.0, lodash.foreach@^4.1.0:
+lodash.foreach@^4.0.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.foreach/-/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
-
-lodash.includes@^4.1.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/lodash.includes/-/lodash.includes-4.3.0.tgz#60bb98a87cb923c68ca1e51325483314849f553f"
 
 lodash.initial@^4.0.1:
   version "4.1.1"
@@ -2809,7 +2794,7 @@ lodash.isarray@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/lodash.isarray/-/lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55"
 
-lodash.isempty@^4.1.2, lodash.isempty@^4.2.1:
+lodash.isempty@^4.2.1:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.isempty/-/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
 
@@ -2855,10 +2840,6 @@ lodash.pairs@^3.0.0:
   dependencies:
     lodash.keys "^3.0.0"
 
-lodash.partition@^4.2.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.partition/-/lodash.partition-4.6.0.tgz#a38e46b73469e0420b0da1212e66d414be364ba4"
-
 lodash.pick@^4.2.1:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
@@ -2866,10 +2847,6 @@ lodash.pick@^4.2.1:
 lodash.restparam@^3.0.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
-
-lodash.trim@^4.2.0:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/lodash.trim/-/lodash.trim-4.5.1.tgz#36425e7ee90be4aa5e27bcebb85b7d11ea47aa57"
 
 lodash.where@^3.1.0:
   version "3.1.0"
@@ -3223,6 +3200,10 @@ ms@0.7.1:
 ms@0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.2.tgz#ae25cf2512b3885a1d95d7f037868d8431124765"
+
+ms@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
 mute-stream@0.0.5:
   version "0.0.5"

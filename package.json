@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/SoftwareMarbles/higher-docker-manager#readme",
   "dependencies": {
-    "debug": "^2.6.0",
+    "debug": "^4.1.0",
     "lodash": "^4.17.2",
     "node-docker-api": "1.1.2",
     "selectn": "^1.1.1"

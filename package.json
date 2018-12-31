@@ -42,7 +42,7 @@
     "readme-badges": "^0.3.3",
     "readme-includes": "^0.2.9",
     "stream-buffers": "^3.0.1",
-    "testdouble": "^1.10.2",
+    "testdouble": "^3.9.2",
     "verb": "github:verbose/verb#dev",
     "verb-generate-readme": "^0.3.0"
   },
